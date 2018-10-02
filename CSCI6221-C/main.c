@@ -26,13 +26,13 @@ int main() {
     int *dynArr = (int *)malloc(sizeof(int)*arrSize);
     finish = clock();
     duration = finish-start;
-    printf("%f\n",duration);
+    printf("%f heap \n",duration);
         
     start = clock();
     int arr1[arrSize];
     finish = clock();
     duration = finish-start;
-    printf("%f\n",duration);
+    printf("%f stack \n",duration);
     }
     return 0;
 }
