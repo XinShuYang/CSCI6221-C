@@ -10,41 +10,44 @@
 #include<stdlib.h>
 #include <time.h>
 
+int* createHeap(int arrsize){
+    return (int*)malloc(sizeof(int)*arrsize);
+}
+
+int* createStack(int arrsize){
+    int arr[arrsize];
+    
+    return arr;
+}
+
 int main() {
     
     int arrSize;
     clock_t start, finish;
     double duration;
 
-    scanf("%d", &arrSize);
+    //scanf("%d", &arrSize);
     
-    printf("%d\n",arrSize);
+    //printf("%d\n",arrSize);
 
-    int arrsize = 100000;
+    int arrsize = 1000000;
 
 
-    start1 = clock();
+    double start1 = clock();
     for(int i = 0;i < 2000000; i++){
         int* arr1 = createHeap(arrsize);
+        //free(arr1);
     }
-    end1 = clock()
-    printf("%f\n",end1 - starat1);
+    double end1 = clock();
+    printf("%f\n",end1-start1);
 
-    start2 = clock();
+    double start2 = clock();
     for(int i = 0;i < 2000000; i++){
+        int* arr2 = createStack(arrsize);
     }
-    end2 = clock();
-    printf("%f\n",end2 - start2);
+    double end2 = clock();
+    printf("%f\n",end2-start2);
 
 }
 
-int* createHeap(int arrsize){
-    int* arr = (int*)malloc(sizeof(int)*arrsize);
-    return arr;
-}
 
-int* createStack(int arrsize){
-    int arr[arrsize];
-
-    return arr;
-}
