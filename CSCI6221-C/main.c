@@ -8,18 +8,31 @@
 
 #include <stdio.h>
 #include<stdlib.h>
+#include <time.h>
 
 int main() {
     
     int arrSize;
-    
+    clock_t start, finish;
+    double duration;
+
     scanf("%d", &arrSize);
     
     printf("%d\n",arrSize);
     
+    for(int i=0;i<2000000;i++){
+    
+    start = clock();
     int *dynArr = (int *)malloc(sizeof(int)*arrSize);
-    
+    finish = clock();
+    duration = finish-start;
+    printf("%f\n",duration);
+        
+    start = clock();
     int arr1[arrSize];
-    
+    finish = clock();
+    duration = finish-start;
+    printf("%f\n",duration);
+    }
     return 0;
 }
