@@ -19,20 +19,32 @@ int main() {
     scanf("%d", &arrSize);
     
     printf("%d\n",arrSize);
-    
-    for(int i=0;i<2000000;i++){
-    
-    start = clock();
-    int *dynArr = (int *)malloc(sizeof(int)*arrSize);
-    finish = clock();
-    duration = finish-start;
-    printf("%f\n",duration);
-        
-    start = clock();
-    int arr1[arrSize];
-    finish = clock();
-    duration = finish-start;
-    printf("%f\n",duration);
+
+    int arrsize = 100000;
+
+
+    start1 = clock();
+    for(int i = 0;i < 2000000; i++){
+        int* arr1 = createHeap(arrsize);
     }
-    return 0;
+    end1 = clock()
+    printf("%f\n",end1 - starat1);
+
+    start2 = clock();
+    for(int i = 0;i < 2000000; i++){
+    }
+    end2 = clock();
+    printf("%f\n",end2 - start2);
+
+}
+
+int* createHeap(int arrsize){
+    int* arr = (int*)malloc(sizeof(int)*arrsize);
+    return arr;
+}
+
+int* createStack(int arrsize){
+    int arr[arrsize];
+
+    return arr;
 }
