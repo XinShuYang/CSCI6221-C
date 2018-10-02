@@ -7,9 +7,19 @@
 //
 
 #include <stdio.h>
+#include<stdlib.h>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+int main() {
+    
+    int arrSize;
+    
+    scanf("%d", &arrSize);
+    
+    printf("%d\n",arrSize);
+    
+    int *dynArr = (int *)malloc(sizeof(int)*arrSize);
+    
+    int arr1[arrSize];
+    
     return 0;
 }
